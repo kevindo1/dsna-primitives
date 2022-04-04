@@ -18,3 +18,17 @@ function at(arr, index) {
 }
 
 console.log(at(['a', 'b', 'c', 'd', 'e'], 1));
+
+function anagrams(wordOne, wordTwo) {
+  const one = wordOne.split('').sort().join();
+  const two = wordTwo.split('').sort().join();
+
+  if (one === two) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(anagrams('superintended', 'unpredestined'));
+console.log(anagrams('pictorialness', 'documentarily'));
